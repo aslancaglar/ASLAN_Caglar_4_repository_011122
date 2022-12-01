@@ -25,3 +25,9 @@ $text-color1: white;
 @mixin fill_white {
     filter: invert(97%) sepia(100%) saturate(2%) hue-rotate(226deg) brightness(103%) contrast(101%);
 }
+
+@mixin desktop {
+    @media only screen and (min-width: $desktop) {
+        @content;
+    }
+}

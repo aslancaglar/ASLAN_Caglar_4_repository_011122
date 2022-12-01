@@ -4,6 +4,21 @@
     margin: 0 auto;
 }
 
+.header__Top {
+    display: flex;
+    position: relative;
+    height: 63px;
+    justify-content: center;
+    align-items: center;
+    &__Arrow {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 20px;
+        color: $text-color;
+    }
+}
+
 .footer {
     padding: 30px 20px;
     background-color: $bg-dark;

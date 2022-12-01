@@ -1,16 +1,8 @@
 .logo {
     display: flex;
-    justify-content: center;
     align-items: center;
-    & a {
-        display: block;
-        & img {
-            width: 163px;
-        }
-        &:hover {
-            display: block;
-            background-color: red;
-        }
+    & img {
+        width: 163px;
     }
 }
 
