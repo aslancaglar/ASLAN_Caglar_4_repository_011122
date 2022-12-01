@@ -1,0 +1,115 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & a {
+        display: block;
+        & img {
+            width: 163px;
+        }
+        &:hover {
+            display: block;
+            background-color: red;
+        }
+    }
+}
+
+.locationPick {
+    @include centerflex;
+    @include shadow_inside;
+    color: $text-color-light;
+    background-color: $bg-light;
+    height: 50px;
+    column-gap: 5px;
+}
+
+.btn {
+    display: block;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    background: rgb(173, 95, 220);
+    background: linear-gradient(0deg, $btn1 0%, $btn2 100%);
+    @include shadow_outside;
+    transform: scale(1);
+    transition: transform 400ms;
+    &:hover {
+        transform: scale(1.05);
+        background: linear-gradient(0deg, lighten($btn1, 5), lighten($btn2, 5)) !important;
+        box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.restaurant-card {
+    border-radius: $radius;
+    overflow: hidden;
+    width: 100%;
+    height: 251px;
+    background-color: #fff;
+    color: $text-color;
+    display: block;
+    position: relative;
+    @include shadow_outside;
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 180px;
+    }
+    &__Newbadge {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $label-and-checked-bg;
+        color: $label-text;
+        border-radius: 2px;
+        padding: 5px;
+        font-size: 14px;
+    }
+    &__info {
+        @include flex_column;
+        justify-content: center;
+        row-gap: 3px;
+        padding: 10px;
+        position: relative;
+        & span {
+            font-weight: 300;
+        }
+        i.fa-heart {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+    }
+}
+
+.fa-heart {
+    font-size: 28px;
+    z-index: 0;
+    &:hover {
+        opacity: 1;
+    }
+    &:hover::after {
+        opacity: 1;
+    }
+    &::after {
+        transition: all 400ms;
+        z-index: 1;
+        opacity: 0;
+        font-family: "Font Awesome 5 Free";
+        content: "\f004";
+        display: inline-block;
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient($btn1, $btn2);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

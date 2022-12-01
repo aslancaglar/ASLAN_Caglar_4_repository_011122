@@ -1,0 +1,28 @@
+@import "./utils/mixins";
+@import "./utils/variables";
+@import "./base/base";
+@import "./layout/layout";
+@import "./composants/composants";
+@import "./pages/homepage";
+%textcolor {
+    color: $primary-color;
+    font-size: 50px;
+}
+
+.p1,
+.p2 {
+    @include textcolor;
+}
+
+.logo {
+    height: 63px;
+    background-color: white;
+}
+
+.fontionnement {
+    height: 440px;
+}
+
+main {
+    background-color: green;
+}

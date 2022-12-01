@@ -1,0 +1,27 @@
+$text-color1: white;
+@mixin textcolor ($color: $text-color1) {
+    color: $color;
+}
+
+@mixin centerflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shadow_inside {
+    box-shadow: inset 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin shadow_outside {
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+@mixin flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin fill_white {
+    filter: invert(97%) sepia(100%) saturate(2%) hue-rotate(226deg) brightness(103%) contrast(101%);
+}

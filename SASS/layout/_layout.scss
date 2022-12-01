@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding: 30px 20px;
+    background-color: $bg-dark;
+    color: #fff;
+    font-weight: 300;
+    &__Logo {
+        @include fill_white;
+        width: 120px;
+        margin-bottom: 10px;
+    }
+    &__Menu {
+        @include flex_column;
+        row-gap: 10px;
+        & li a {
+            color: #fff;
+        }
+        & li i {
+            margin-right: 10px;
+        }
+    }
+}
