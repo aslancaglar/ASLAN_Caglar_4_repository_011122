@@ -391,6 +391,9 @@ html {
     scrollbar-width: none;
     padding: 10px 0;
   }
+  .listContainer::-webkit-scrollbar {
+    display: none;
+  }
   .restaurants {
     padding-left: 10%;
   }

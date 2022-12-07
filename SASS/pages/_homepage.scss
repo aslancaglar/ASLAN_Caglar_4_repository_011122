@@ -102,6 +102,9 @@
                                     -ms-overflow-style: none;
                                     scrollbar-width: none;
                                     padding: 10px 0;
+                                    &::-webkit-scrollbar {
+                                        display: none;
+                                    }
                                 }
                                 .restaurants {
                                     padding-left: 10%;
