@@ -22,19 +22,18 @@
                             }
                             
                             .fonctionnement {
-                                padding: 50px 20px;
+                                padding: 50px 20px 60px 20px;
                                 @include flex_column;
                                 &__Steps {
                                     margin-top: 20px;
-                                    display: grid;
-                                    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-                                    gap: 20px;
+                                    display: flex;
+                                    @include flex_column;
+                                    gap: 20px
                                 }
                                 &__Step {
+                                    margin: 0 0 0 5px;
                                     position: relative;
-                                    margin: 0 0 0 10px;
-                                    position: relative;
-                                    width: calc(100% - 10px);
+                                    width: 100%;
                                     padding: 25px;
                                     background-color: $steps-bg;
                                     border-radius: $radius;
@@ -47,9 +46,9 @@
                                     }
                                     &:hover {
                                         background-color: #F5EDFF;
-                                        >i {
-                                            color: $primary_color;
-                                        }
+                                    }
+                                    &:hover>i {
+                                        color: $primary_color;
                                     }
                                     &__Number {
                                         display: block;
@@ -82,4 +81,60 @@
                                 display: grid;
                                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                                 gap: 15px;
+                            }
+                            
+                            @media (min-width: 992px) {
+                                .fonctionnement {
+                                    padding: 50px 10% 60px 10%;
+                                    @include flex_column;
+                                    &__Steps {
+                                        margin-top: 20px;
+                                        display: flex;
+                                        flex-direction: row;
+                                        gap: 20px
+                                    }
+                                }
+                                .container {
+                                    max-width: 100%;
+                                }
+                                .listContainer {
+                                    overflow-y: scroll;
+                                    -ms-overflow-style: none;
+                                    scrollbar-width: none;
+                                    padding: 10px 0;
+                                }
+                                .restaurants {
+                                    padding-left: 10%;
+                                }
+                                .restaurants__List {
+                                    width: 112%;
+                                }
+                                .footer {
+                                    height: 114px;
+                                    padding: 0 100px 0 0;
+                                    background-color: $bg-dark;
+                                    color: #fff;
+                                    font-weight: 300;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    column-gap: 50px;
+                                    &__Logo {
+                                        @include fill_white;
+                                        width: 120px;
+                                        order: 2;
+                                        margin-bottom: -2px;
+                                    }
+                                    &__Menu {
+                                        display: flex;
+                                        flex-direction: row;
+                                        column-gap: 40px;
+                                        & li a {
+                                            color: #fff;
+                                        }
+                                        & li i {
+                                            margin-right: 10px;
+                                        }
+                                    }
+                                }
                             }
